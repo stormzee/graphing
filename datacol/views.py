@@ -3,5 +3,5 @@ from .models import Metrics_view
 # Create your views here.
 
 def index(request):
-    sql = Metrics_view.objects.all()
-    return render(request, template_name='viz.html', context={'sql':sql})
+    sql_res = Metrics_view.objects.all()
+    return render(request, template_name='viz.html', context={'sql_res':sql_res})
